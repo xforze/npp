@@ -9,7 +9,7 @@ RUN apk --no-cache add php7 php7-fpm php7-opcache php7-mysqli php7-json php7-ope
     rm /etc/nginx/conf.d/default.conf && pip3.8 install httpserver
 
 COPY ajax.py /ajax.py
-
+RUN chmod 777 /ajax.py
 
 # Configure nginx
 COPY config/nginx.conf /etc/nginx/nginx.conf
